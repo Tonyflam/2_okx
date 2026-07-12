@@ -4,7 +4,11 @@
 
 **A Uniswap v4 Hook on X Layer that turns one liquidity pool into a fully on-chain 8-team knockout tournament.** Trading *is* the game: every swap by a pledged fan is a shot on goal, volume scores goals, the bracket resolves itself, and champion fans claim a pot skimmed from their own trades.
 
-**🔴 LIVE on X Layer mainnet (chain 196)** — Hook [`0x51f3d18a574c1deec5c04d395573cda9248dd0c4`](https://www.oklink.com/x-layer/address/0x51f3d18a574c1deec5c04d395573cda9248dd0c4) · Token [`0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f`](https://www.oklink.com/x-layer/address/0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f) · Kickoff **2026-07-12 12:45 UTC** · Full record: [deployments/xlayer.json](deployments/xlayer.json)
+**🔴 LIVE on X Layer mainnet (chain 196)** — Hook [`0x51f3d18a574c1deec5c04d395573cda9248dd0c4`](https://www.oklink.com/x-layer/address/0x51f3d18a574c1deec5c04d395573cda9248dd0c4) · Token [`0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f`](https://www.oklink.com/x-layer/address/0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f) · Pool `0x0cc28818a207ae3c182a88dbe9677203859f916116711a19c9b010bf390bbeda` · Kickoff **2026-07-12 12:45 UTC** · Full record: [deployments/xlayer.json](deployments/xlayer.json)
+
+🎥 **[2-minute demo video](https://youtu.be/Jk3e9K3U0bg)** · 📋 **[Judge guide](docs/JUDGING.md)** · 🪝 **[Uniswap hooklist PR #1062](https://github.com/Uniswap/hooklist/pull/1062)**
+
+**Current status (honest):** contracts deployed & pool initialized ✅ · explorer source verification pending ⏳ · pool liquidity pending ⏳ · OKX Wallet routing unconfirmed ⏳
 
 Built for the **Hook × World Cup** campaign (OKX × X Layer × Uniswap v4, Jun 11 – Jul 12 2026).
 
@@ -64,9 +68,9 @@ flowchart LR
 ## Build & test
 
 ```bash
-git clone --recurse-submodules <repo>
+git clone --recurse-submodules https://github.com/Tonyflam/2_okx
 forge build
-forge test          # 38 tests + 3 fuzz suites (512 runs each)
+forge test          # 77 tests across 2 suites, incl. 3 fuzz properties
 forge test --match-contract MundialDemo -vv   # narrated end-to-end tournament
 ```
 
@@ -74,13 +78,13 @@ forge test --match-contract MundialDemo -vv   # narrated end-to-end tournament
 
 ```bash
 export XLAYER_RPC_URL=https://rpc.xlayer.tech
-export PRIVATE_KEY=0x...
 export POOL_MANAGER=0x360e68faccca8ca495c1b759fd9eee466db9fb32
 # optional: QUOTE_TOKEN (default native OKB), KICKOFF, REGULATION, EXTRA_TIME, BREAK_TIME, GOAL_THRESHOLD
 
-forge script script/DeployMundial.s.sol --rpc-url xlayer --broadcast
-# then seed liquidity (ERC20 pair) via:
-forge script script/SeedLiquidity.s.sol --rpc-url xlayer --broadcast
+# use a Foundry keystore (cast wallet import <name> --interactive); never a raw key in env
+forge script script/DeployMundial.s.sol --rpc-url $XLAYER_RPC_URL --account <keystore-name> --broadcast
+# then seed liquidity (native-OKB pair) via:
+forge script script/SeedLiquidity.s.sol --rpc-url $XLAYER_RPC_URL --account <keystore-name> --broadcast
 ```
 
 The deploy script mines a CREATE2 salt (`HookMiner`) so the hook address encodes its permission flags, deploys token + hook, and initializes the dynamic-fee pool at 1:1.
@@ -89,19 +93,17 @@ The deploy script mines a CREATE2 salt (`HookMiner`) so the hook address encodes
 
 | Contract | Address |
 |---|---|
-| MundialToken | _pending deploy_ |
-| MundialHook | _pending deploy_ |
+| MundialToken | [`0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f`](https://www.oklink.com/x-layer/address/0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f) |
+| MundialHook | [`0x51f3d18a574c1deec5c04d395573cda9248dd0c4`](https://www.oklink.com/x-layer/address/0x51f3d18a574c1deec5c04d395573cda9248dd0c4) |
 | PoolManager | `0x360e68faccca8ca495c1b759fd9eee466db9fb32` |
 
 ## Docs
 
-- [docs/RUNBOOK.md](docs/RUNBOOK.md) — **master launch runbook** (single source of truth for deployment & submission).
-- [docs/EVIDENCE.md](docs/EVIDENCE.md) — verified campaign rules, competitive landscape, gap analysis, concept selection.
+- [docs/JUDGING.md](docs/JUDGING.md) — **judge guide**: evidence per judging dimension, how to verify in three commands.
 - [docs/SPEC.md](docs/SPEC.md) — PRD, interfaces, threat model.
-- [docs/PITCH.md](docs/PITCH.md) — judge-facing pitches (10 → 100 words + technical).
-- [docs/SUBMISSION.md](docs/SUBMISSION.md) · [docs/FORM.md](docs/FORM.md) — submission plan and form answer sheet.
-- [docs/BRAND.md](docs/BRAND.md) · [docs/ASSETS.md](docs/ASSETS.md) · [docs/VOICE.md](docs/VOICE.md) · [docs/VIDEO.md](docs/VIDEO.md) · [docs/SOCIAL.md](docs/SOCIAL.md) — brand, image prompts, voice-over, video production, social launch.
-- [deployments/xlayer.json](deployments/xlayer.json) — machine-readable deployment record.
+- [docs/PITCH.md](docs/PITCH.md) — pitches from 10 words to technical depth.
+- [deployments/xlayer.json](deployments/xlayer.json) — machine-readable deployment record (real tx hashes).
+- [assets/audio/CREDITS.md](assets/audio/CREDITS.md) — demo-video audio attribution.
 
 > Mundial is an independent project built for the Hook × World Cup campaign on X Layer. It is not affiliated with or endorsed by FIFA, any football federation, Uniswap Labs, OKX, or X Layer. Not financial advice; participation involves risk of loss.
 

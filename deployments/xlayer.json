@@ -1,7 +1,7 @@
 {
   "network": "X Layer Mainnet",
   "chainId": 196,
-  "status": "DEPLOYED 2026-07-12 ~11:45 UTC — verified on-chain (code present, pool initialized, kickoff set)",
+  "status": "DEPLOYED 2026-07-12 11:46 UTC — bytecode live, pool initialized, kickoff set; explorer source verification pending; liquidity not yet seeded",
   "deployer": "0x80bc3f17da930c473205eec282850fb8c46436b0",
   "contracts": {
     "MundialHook": {
@@ -30,7 +30,8 @@
     },
     "initializeTx": "0x8237004d7883cf1454da796074b16c831076a07b6354c685f5296942ef9d3992",
     "initialSqrtPriceX96": "79228162514264337593543950336 (1:1)",
-    "liquidityTx": "<PENDING — SeedLiquidity.s.sol>"
+    "liquidityTx": null,
+    "liquidityStatus": "none seeded yet — pool initialized but not tradable"
   },
   "gameParameters": {
     "kickoff": "1783860336 (2026-07-12 12:45:36 UTC)",
@@ -60,5 +61,5 @@
     "rpc": "https://rpc.xlayer.tech",
     "result": "SIMULATION COMPLETE (no broadcast)"
   },
-  "deployedAtUTC": "<PENDING>"
+  "deployedAtUTC": "2026-07-12T11:46:01Z (token deploy block timestamp, chain-verified)"
 }

@@ -1,0 +1,38 @@
+{
+  "name": "Mundial",
+  "tagline": "The Uniswap v4 pool that plays the World Cup",
+  "chain": "xlayer",
+  "chainId": 196,
+  "contracts": {
+    "hook": "0x51f3d18a574c1deec5c04d395573cda9248dd0c4",
+    "token": "0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f",
+    "poolManager": "0x360e68faccca8ca495c1b759fd9eee466db9fb32",
+    "poolId": "0x0cc28818a207ae3c182a88dbe9677203859f916116711a19c9b010bf390bbeda"
+  },
+  "hookFlags": ["afterInitialize", "beforeSwap", "afterSwap", "afterSwapReturnsDelta"],
+  "links": {
+    "repository": "https://github.com/Tonyflam/2_okx",
+    "demoVideo": "https://youtu.be/Jk3e9K3U0bg",
+    "hooklistPR": "https://github.com/Uniswap/hooklist/pull/1062",
+    "explorerHook": "https://www.oklink.com/x-layer/address/0x51f3d18a574c1deec5c04d395573cda9248dd0c4",
+    "judgeGuide": "docs/JUDGING.md"
+  },
+  "features": [
+    "eight-team knockout tournament in hook storage",
+    "swaps are shots, volume scores goals",
+    "golden goal settles inside the scoring swap",
+    "penalties decided by shot count",
+    "dynamic fee tiers: 0.50% / 0.25% / 0.15% / 0.10%",
+    "0.20% Champions Pot skim, pro-rata claims, leftovers donated to LPs",
+    "no owner, no oracle, no randomness, no upgradeability"
+  ],
+  "testCommand": "forge test",
+  "testsPassing": 77,
+  "status": {
+    "deployed": true,
+    "poolInitialized": true,
+    "sourceVerified": false,
+    "liquiditySeeded": false,
+    "okxRoutingConfirmed": false
+  }
+}

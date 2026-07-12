@@ -1,6 +1,6 @@
 # Mundial — Judge-Facing Pitches
 
-All comparative claims are sourced in [EVIDENCE.md](EVIDENCE.md) §2 (publicly reviewed competitor set, checked 2026-07-12). We never claim "first" or "only" in absolute terms.
+All comparative statements were checked against the publicly reviewable competitor set on 2026-07-12. We never claim "first" or "only" in absolute terms.
 
 ## 10-word pitch
 One Uniswap v4 pool plays a whole World Cup autonomously.
@@ -15,7 +15,7 @@ Mundial is a Uniswap v4 hook on X Layer that runs a full eight-team knockout tou
 Mundial makes a liquidity pool play the World Cup. Eight teams enter a knockout bracket living entirely in hook storage on X Layer. Traders pledge a team once; while that team's match is live their swaps are recorded as shots, and swap volume converts to goals. Matches resolve by full-time lead, sudden-death golden goals settled inside the scoring swap, penalties by shot count, then deterministic seeding. Fans trade at reduced dynamic fees; a 0.20% skim accumulates a Champions Pot claimed pro-rata by champion-team fans, with leftovers donated to LPs. No owner, no oracle, no randomness — only swaps and time.
 
 ## Two-minute spoken pitch
-Use the narration script in [VIDEO.md](VIDEO.md) §1 verbatim — it is timed, sourced, and consistent.
+See the [2-minute demo video](https://youtu.be/Jk3e9K3U0bg) — the narration follows these pitches.
 
 ## Technical-judge pitch
 Mundial exercises the v4 hook surface meaningfully rather than decoratively. `afterInitialize` binds exactly one dynamic-fee pool and rejects everything else. `beforeSwap` lazily settles any due matches (bounded 7-iteration sync) and returns a per-swap LP-fee override — four tiers driven by game state. `afterSwap` with `afterSwapReturnDelta` implements the canonical fee-taking pattern on the unspecified currency to fund the pot, and records shots/volume for the live match. Unclaimed funds exit via `donate()` inside an `unlock` callback, handling native-OKB settlement. The hook address is CREATE2-mined to encode permissions and self-validated in the constructor (`Hooks.validateHookPermissions`) — we implement `IHooks` directly since BaseHook was removed from v4-periphery main. 77 tests including comparative fee assertions, full settlement-path coverage, and three fuzz properties (goal math, claim conservation, tournament termination) at 2,000 runs.

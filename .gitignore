@@ -9,3 +9,10 @@ assets/video/work/joined.mp4
 assets/video/review/
 assets/video/final/
 assets/video/raw/
+
+# private operations area (never commit)
+.private/
+verify/
+assets/fonts/
+assets/video/narration.mp3
+docs/FINAL_DEMO_ASSEMBLY_PROMPT.md
