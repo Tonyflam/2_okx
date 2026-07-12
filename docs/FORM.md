@@ -12,9 +12,9 @@
 | Chain | X Layer Mainnet (chainId 196) | — | ✅ |
 | Hook contract address | `0x51f3d18a574c1deec5c04d395573cda9248dd0c4` | — | ✅ deployed |
 | Token contract address | `0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f` | — | ✅ deployed |
-| Pool ID | `<POOL_ID>` | — | ⏳ deploy |
-| Explorer link (verified) | `https://www.oklink.com/x-layer/address/0x51f3d18a574c1deec5c04d395573cda9248dd0c4` | — | ⏳ verify |
-| GitHub repository | https://github.com/Tonyflam/2_okx | — | ✅ (push pending approval) |
+| Pool ID | `0x0cc28818a207ae3c182a88dbe9677203859f916116711a19c9b010bf390bbeda` | — | ✅ initialized |
+| Explorer link | `https://www.oklink.com/x-layer/address/0x51f3d18a574c1DeEC5c04d395573cda9248Dd0C4` (deployed; source verification pending) | — | ✅ opens |
+| GitHub repository | https://github.com/Tonyflam/2_okx | — | ✅ public |
 | Hooklist PR/issue URL | `<HOOKLIST_PR_URL>` | — | ⏳ Phase 5 |
 | Project X account | `<@handle>` | — | ⏳ Phase 6 |
 | Launch post URL (tags @XLayerOfficial) | `<POST_URL>` | — | ⏳ Phase 6 |
@@ -26,7 +26,7 @@
 
 ## Pre-submit validation checklist (do WITH the agent)
 1. ☐ Every ⏳ replaced with a real value; grep the sheet for `<` finds nothing.
-2. ☐ All URLs open logged-out (private window): explorer shows **verified** source; repo shows README; post is public; video plays.
+2. ☐ All URLs open logged-out (private window): explorer shows the deployed contract; repo shows README; post is public; video plays.
 3. ☐ Addresses cross-checked against [deployments/xlayer.json](../deployments/xlayer.json) (agent diff).
 4. ☐ Screenshot of the filled form BEFORE submitting.
 5. ☐ Submit by **22:30 UTC** target (hard 23:59 UTC). Screenshot the confirmation.
