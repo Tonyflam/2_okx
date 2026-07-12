@@ -2,3 +2,4 @@ cache/
 out/
 broadcast/
 .env
+docs/NEXT_AGENT_PROMPT.md

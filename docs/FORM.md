@@ -1,0 +1,32 @@
+# Final Submission Answer Sheet — Hook × World Cup
+
+**Form location**: campaign page → "Submit project" button → Google Form (exact form URL is client-side rendered on https://web3.okx.com/xlayer/build-x-hackathon/hooktheworldcup — resolve on first open; verify the form title mentions Hook × World Cup before filling. STATUS: page shows campaign **Online** as of 05:40 UTC Jul 12).
+
+**Rule**: fill only rows marked ✅ Verified. Rows marked ⏳ get real values during RUNBOOK Phases 2–7. Never submit with a ⏳ remaining.
+
+| Field (typical) | Answer | Chars | Status |
+|---|---|---|---|
+| Project name | Mundial | 7 | ✅ |
+| One-line description | The Uniswap v4 pool that plays the World Cup: an autonomous 8-team knockout tournament where swaps are shots, volume scores goals, and champion fans claim the pot. | 165 | ✅ |
+| Project description | Use the 100-word pitch from [PITCH.md](PITCH.md). | ~640 | ✅ |
+| Chain | X Layer Mainnet (chainId 196) | — | ✅ |
+| Hook contract address | `<HOOK_ADDRESS>` | — | ⏳ deploy |
+| Token contract address | `<TOKEN_ADDRESS>` | — | ⏳ deploy |
+| Pool ID | `<POOL_ID>` | — | ⏳ deploy |
+| Explorer link (verified) | `https://www.oklink.com/x-layer/address/<HOOK_ADDRESS>` | — | ⏳ verify |
+| GitHub repository | https://github.com/Tonyflam/2_okx | — | ✅ (push pending approval) |
+| Hooklist PR/issue URL | `<HOOKLIST_PR_URL>` | — | ⏳ Phase 5 |
+| Project X account | `<@handle>` | — | ⏳ Phase 6 |
+| Launch post URL (tags @XLayerOfficial) | `<POST_URL>` | — | ⏳ Phase 6 |
+| Demo video URL | `<VIDEO_URL>` (YouTube unlisted; test in private window) | — | ⏳ Phase 7 |
+| Team / contact | your name + email/TG (your choice — not stored in repo) | — | ⏳ human |
+| Wallet for prizes | your address (NOT the throwaway deployer unless you intend it) | — | ⏳ human |
+| How it uses Uniswap v4 | beforeSwap dynamic-fee overrides per game state; afterSwap + afterSwapReturnDelta pot skim and shot recording; afterInitialize single-pool binding; donate() LP fallback via unlock callback; CREATE2-mined permission address. | 240 | ✅ |
+| What makes it creative | The World Cup is the mechanism, not the skin: bracket scheduling creates timed demand windows, golden goals settle inside the scoring swap, penalties count swaps — the entire tournament state machine lives in hook storage with no admin, oracle, or randomness. | 260 | ✅ |
+
+## Pre-submit validation checklist (do WITH the agent)
+1. ☐ Every ⏳ replaced with a real value; grep the sheet for `<` finds nothing.
+2. ☐ All URLs open logged-out (private window): explorer shows **verified** source; repo shows README; post is public; video plays.
+3. ☐ Addresses cross-checked against [deployments/xlayer.json](../deployments/xlayer.json) (agent diff).
+4. ☐ Screenshot of the filled form BEFORE submitting.
+5. ☐ Submit by **22:30 UTC** target (hard 23:59 UTC). Screenshot the confirmation.

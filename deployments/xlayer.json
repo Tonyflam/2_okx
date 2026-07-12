@@ -1,0 +1,64 @@
+{
+  "network": "X Layer Mainnet",
+  "chainId": 196,
+  "status": "NOT_DEPLOYED — placeholders only; filled after human-approved broadcast",
+  "deployer": "<DEPLOYER_ADDRESS>",
+  "contracts": {
+    "MundialHook": {
+      "address": "<PENDING>",
+      "deployTx": "<PENDING>",
+      "explorer": "https://www.oklink.com/x-layer/address/<PENDING>",
+      "verified": false,
+      "hookFlagBits": "0x10C4 (afterInitialize | beforeSwap | afterSwap | afterSwapReturnDelta)"
+    },
+    "MundialToken": {
+      "address": "<PENDING>",
+      "deployTx": "<PENDING>",
+      "explorer": "https://www.oklink.com/x-layer/address/<PENDING>",
+      "verified": false,
+      "supply": "100000000000000000000000000"
+    }
+  },
+  "pool": {
+    "poolId": "<PENDING>",
+    "poolKey": {
+      "currency0": "0x0000000000000000000000000000000000000000 (native OKB)",
+      "currency1": "<MUNDIAL_TOKEN_ADDRESS>",
+      "fee": "0x800000 (DYNAMIC_FEE_FLAG)",
+      "tickSpacing": 60,
+      "hooks": "<HOOK_ADDRESS>"
+    },
+    "initializeTx": "<PENDING>",
+    "initialSqrtPriceX96": "79228162514264337593543950336 (1:1)",
+    "liquidityTx": "<PENDING>"
+  },
+  "gameParameters": {
+    "kickoff": "<PENDING unix ts>",
+    "regulation": 28800,
+    "extraTime": 3600,
+    "breakTime": 10800,
+    "goalThreshold": "1000000000000000000",
+    "teams": ["Argentina", "France", "Brazil", "England", "Spain", "Germany", "Portugal", "Netherlands"]
+  },
+  "dependencies": {
+    "poolManager": "0x360e68faccca8ca495c1b759fd9eee466db9fb32",
+    "positionManager": "0xcf1eafc6928dc385a342e7c6491d371d2871458b",
+    "permit2": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+    "create2Proxy": "0x4e59b44847b379578588920cA78FbF26c0B4956C"
+  },
+  "build": {
+    "compiler": "solc 0.8.26",
+    "evmVersion": "cancun",
+    "optimizer": true,
+    "optimizerRuns": 800,
+    "gitCommit": "<PENDING — commit hash at deploy time>"
+  },
+  "simulation": {
+    "date": "2026-07-12T05:45:00Z",
+    "totalGas": 5642989,
+    "estimatedCostOKB": "0.000225719565642989",
+    "rpc": "https://rpc.xlayer.tech",
+    "result": "SIMULATION COMPLETE (no broadcast)"
+  },
+  "deployedAtUTC": "<PENDING>"
+}

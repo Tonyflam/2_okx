@@ -66,7 +66,24 @@ Every competitor is either: (a) a **single match** (GoldenGoal), (b) dependent o
 
 ## 6. Known unknowns / risks
 
-1. **WOKB address unverified** — deploy against native OKB (`QUOTE_TOKEN=0`, hook handles native via `settle{value}`) or verify WOKB on the explorer first.
+1. **WOKB address unverified** — deploy against native OKB (`QUOTE_TOKEN=0`, hook handles native via `settle{value}`) or verify WOKB on the explorer first. *(Update Jul 12: native-OKB deployment simulated successfully — WOKB not needed.)*
 2. **OKX Wallet routing to hooked pools** — inferred from merged competitors receiving volume; not contractually guaranteed.
 3. **Judging weights & prize split** — unpublished; strategy hedges by being strong on all three axes.
 4. **Explorer verification** must succeed before the hooklist issue — allow time for `forge verify-contract` with the OKX/OKLink verifier.
+5. **Exact Google Form URL** — client-side rendered behind the campaign page's "Submit project" button; resolve at first human open (page confirmed **Online** at 05:40 UTC Jul 12).
+
+## 7. Launch-day verifications (2026-07-12, 05:40–06:10 UTC)
+
+| Claim | Result | Method | Conf. |
+|---|---|---|---|
+| Campaign still open | "Hook x World Cup … Online" | official page fetch 05:40 UTC | V |
+| Chain 196 live | both RPCs (`rpc.xlayer.tech`, `xlayerrpc.okx.com`) return 196 | `cast chain-id` | V |
+| PoolManager `0x360e…fb32` deployed | 48 KB bytecode on-chain | `cast code` | V |
+| PositionManager `0xcf1e…458b` deployed | 47.7 KB bytecode | `cast code` | V |
+| Permit2 `0x0000…78BA3` deployed | 18.3 KB bytecode | `cast code` | V |
+| CREATE2 proxy `0x4e59…956C` | canonical Arachnid bytecode present | `cast code` | V |
+| Deploy cost | 5,642,989 gas ≈ 0.000226 OKB (gas price 0.02–0.04 gwei) | forge script simulation vs live RPC | V |
+| Mined hook address flag bits | low 14 bits = `0x10C4` = required permissions | simulation output | V |
+| forge supports `--verifier oklink` | listed in enum | forge CLI probe | V |
+| Hooklist issue fields | Chain dropdown incl. `xlayer`; Hook Address required; name/description/deployer optional | raw `submit-hook.yml` fetch | V |
+| Engineering gates | 77/77 tests (CI profile, 2000 fuzz runs), lint clean, secrets scan clean | local run | V |

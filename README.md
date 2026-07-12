@@ -1,4 +1,4 @@
-# ⚽ Mundial — the pool that plays the World Cup
+# ⚽ MUNDIAL — the pool that plays the World Cup
 
 **A Uniswap v4 Hook on X Layer that turns one liquidity pool into a fully on-chain 8-team knockout tournament.** Trading *is* the game: every swap by a pledged fan is a shot on goal, volume scores goals, the bracket resolves itself, and champion fans claim a pot skimmed from their own trades.
 
@@ -91,9 +91,15 @@ The deploy script mines a CREATE2 salt (`HookMiner`) so the hook address encodes
 
 ## Docs
 
+- [docs/RUNBOOK.md](docs/RUNBOOK.md) — **master launch runbook** (single source of truth for deployment & submission).
 - [docs/EVIDENCE.md](docs/EVIDENCE.md) — verified campaign rules, competitive landscape, gap analysis, concept selection.
 - [docs/SPEC.md](docs/SPEC.md) — PRD, interfaces, threat model.
-- [docs/SUBMISSION.md](docs/SUBMISSION.md) — submission plan, pitch, demo script, content calendar.
+- [docs/PITCH.md](docs/PITCH.md) — judge-facing pitches (10 → 100 words + technical).
+- [docs/SUBMISSION.md](docs/SUBMISSION.md) · [docs/FORM.md](docs/FORM.md) — submission plan and form answer sheet.
+- [docs/BRAND.md](docs/BRAND.md) · [docs/ASSETS.md](docs/ASSETS.md) · [docs/VOICE.md](docs/VOICE.md) · [docs/VIDEO.md](docs/VIDEO.md) · [docs/SOCIAL.md](docs/SOCIAL.md) — brand, image prompts, voice-over, video production, social launch.
+- [deployments/xlayer.json](deployments/xlayer.json) — machine-readable deployment record.
+
+> Mundial is an independent project built for the Hook × World Cup campaign on X Layer. It is not affiliated with or endorsed by FIFA, any football federation, Uniswap Labs, OKX, or X Layer. Not financial advice; participation involves risk of loss.
 
 ## License
 
