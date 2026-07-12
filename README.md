@@ -8,7 +8,7 @@
 
 🎥 **[2-minute demo video](https://youtu.be/Jk3e9K3U0bg)** · 📋 **[Judge guide](docs/JUDGING.md)** · 🪝 **[Uniswap hooklist PR #1062](https://github.com/Uniswap/hooklist/pull/1062)**
 
-**Current status (honest):** contracts deployed & pool initialized ✅ · explorer source verification pending ⏳ · pool liquidity pending ⏳ · OKX Wallet routing unconfirmed ⏳
+**Current status (honest):** contracts deployed & pool initialized ✅ · source verified on Sourcify (exact match) ✅ · pool liquidity pending ⏳ · OKX Wallet routing unconfirmed ⏳
 
 Built for the **Hook × World Cup** campaign (OKX × X Layer × Uniswap v4, Jun 11 – Jul 12 2026).
 

@@ -55,7 +55,7 @@ forge test --match-contract MundialDemo -vv
 | Item | Status |
 |---|---|
 | Hook + token deployed, pool initialized (mainnet) | ✅ VERIFIED (bytecode + txs in [deployments/xlayer.json](../deployments/xlayer.json)) |
-| Explorer source verification | ⏳ PENDING (standard-JSON prepared; matching bytecode reproducible from this repo at the recorded commit) |
+| Source verification | ✅ VERIFIED — exact match on [Sourcify](https://repo.sourcify.dev/196/0x51f3d18a574c1DeEC5c04d395573cda9248Dd0C4) (hook + [token](https://repo.sourcify.dev/196/0xFB8FB4cF5f92256c52a638F46f8eCC2525303d6f), chain 196) |
 | Pool liquidity | ⏳ PENDING (pool initialized at 1:1, no position minted yet) |
 | OKX Wallet routing | ⏳ UNCONFIRMED (depends on liquidity + discovery) |
 | Hooklist PR | 🟢 OPEN, checks passing ([#1062](https://github.com/Uniswap/hooklist/pull/1062)) |

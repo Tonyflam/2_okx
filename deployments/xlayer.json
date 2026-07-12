@@ -1,21 +1,21 @@
 {
   "network": "X Layer Mainnet",
   "chainId": 196,
-  "status": "DEPLOYED 2026-07-12 11:46 UTC — bytecode live, pool initialized, kickoff set; explorer source verification pending; liquidity not yet seeded",
+  "status": "DEPLOYED 2026-07-12 11:46 UTC — bytecode live, pool initialized, kickoff set; source verified on Sourcify (exact match); liquidity not yet seeded",
   "deployer": "0x80bc3f17da930c473205eec282850fb8c46436b0",
   "contracts": {
     "MundialHook": {
       "address": "0x51f3d18a574c1deec5c04d395573cda9248dd0c4",
       "deployTx": "0x97ea47ce56c0af48058049b62787f05244086736588496d903fb0ceb17a25dd0",
       "explorer": "https://www.oklink.com/x-layer/address/0x51f3d18a574c1deec5c04d395573cda9248dd0c4",
-      "verified": false,
+      "verified": "sourcify exact_match 2026-07-12T23:00:47Z (runtime)",
       "hookFlagBits": "0x10C4 (afterInitialize | beforeSwap | afterSwap | afterSwapReturnDelta)"
     },
     "MundialToken": {
       "address": "0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f",
       "deployTx": "0x60920d23354211443a444286440593fd84ffd6c0b56629606034cac1345d1131",
       "explorer": "https://www.oklink.com/x-layer/address/0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f",
-      "verified": false,
+      "verified": "sourcify exact_match 2026-07-12T23:00:22Z (creation + runtime)",
       "supply": "100000000000000000000000000"
     }
   },

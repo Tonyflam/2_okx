@@ -31,7 +31,7 @@
   "status": {
     "deployed": true,
     "poolInitialized": true,
-    "sourceVerified": false,
+    "sourceVerified": true,
     "liquiditySeeded": false,
     "okxRoutingConfirmed": false
   }
