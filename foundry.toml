@@ -10,6 +10,11 @@ optimizer_runs = 800
 fs_permissions = [{ access = "read-write", path = ".forge-snapshots/" }]
 gas_reports = ["MundialHook", "MundialToken"]
 
+# block-timestamp comparisons are the core, intentional design input of the
+# tournament clock (hour-scale matches; second-scale validator drift is immaterial).
+[lint]
+exclude_lints = ["block-timestamp"]
+
 [profile.ci]
 fuzz = { runs = 2000 }
 

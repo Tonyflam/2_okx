@@ -345,6 +345,9 @@ contract MundialHook is IHooks, IUnlockCallback {
     function goalsOf(uint8 matchId, bool sideA) public view returns (uint64) {
         Match storage m = _matches[matchId];
         uint256 volume = sideA ? m.volumeA : m.volumeB;
+        // safe: volume <= type(uint128).max and goalThreshold >= 1e17-scale in practice;
+        // a truncating goal count would require > 1.8e19 * threshold volume.
+        // forge-lint: disable-next-line(unsafe-typecast)
         return uint64(volume / goalThreshold);
     }
 
@@ -433,6 +436,8 @@ contract MundialHook is IHooks, IUnlockCallback {
         (Currency skimCurrency, int128 unspecified) =
             specifiedIs0 ? (key.currency1, delta.amount1()) : (key.currency0, delta.amount0());
         if (unspecified < 0) unspecified = -unspecified;
+        // safe: unspecified is non-negative here, so int128 -> uint128 cannot truncate.
+        // forge-lint: disable-next-line(unsafe-typecast)
         uint256 skim = uint256(uint128(unspecified)) * SKIM_BIPS / BIPS_DENOMINATOR;
         if (skim > 0) {
             poolManager.take(skimCurrency, address(this), skim);
