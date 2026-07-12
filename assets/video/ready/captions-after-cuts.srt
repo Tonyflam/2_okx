@@ -9,122 +9,108 @@ This is Mundial, a Uniswap V4 hook on X
 Layer.
 
 3
-00:00:08,350 --> 00:00:12,100
-Every World Cup DeFi project so far picks
-one match,
-
-4
-00:00:12,430 --> 00:00:14,700
-trusts an admin, or rolls the dice.
-
-5
-00:00:15,330 --> 00:00:17,140
+00:00:08,030 --> 00:00:09,840
 Mundial does something harder.
 
-6
-00:00:17,450 --> 00:00:22,280
+4
+00:00:10,150 --> 00:00:14,980
 It runs the entire tournament with no one
 in charge. Here's the trick.
 
-7
-00:00:22,650 --> 00:00:26,280
+5
+00:00:15,350 --> 00:00:18,980
 Fans pledge one of eight teams — once,
 irreversibly.
 
-8
-00:00:26,690 --> 00:00:31,340
+6
+00:00:19,390 --> 00:00:24,040
 When their team's match is live, every
 swap they make becomes a shot on goal.
 
-9
-00:00:31,750 --> 00:00:33,620
+7
+00:00:24,450 --> 00:00:26,320
 Trading volume scores goals.
 
-10
-00:00:34,150 --> 00:00:37,780
+8
+00:00:26,850 --> 00:00:30,480
 The market literally plays the football.
 Watch it run.
 
-11
-00:00:38,210 --> 00:00:43,640
+9
+00:00:30,910 --> 00:00:36,340
 Argentina versus France. Fans trade. Goals
 go up. Five to three.
 
-12
-00:00:43,870 --> 00:00:45,140
+10
+00:00:36,570 --> 00:00:37,840
 Argentina advance.
 
-13
-00:00:45,770 --> 00:00:49,900
+11
+00:00:38,470 --> 00:00:42,600
 Brazil against England is scoreless into
 extra time. Sudden death.
 
-14
-00:00:50,430 --> 00:00:53,680
+12
+00:00:43,130 --> 00:00:46,380
 One Brazilian fan swaps. GOLDEN GOAL.
 
-15
-00:00:54,190 --> 00:00:57,200
+13
+00:00:46,890 --> 00:00:49,900
 The match settles inside the very swap
 that scored it.
 
-16
-00:00:57,510 --> 00:00:58,760
+14
+00:00:50,210 --> 00:00:51,460
 Semifinals.
 
-17
-00:00:58,870 --> 00:01:00,900
+15
+00:00:51,570 --> 00:00:53,600
 Penalties decided by shot counts.
 
-18
-00:01:01,230 --> 00:01:03,920
+16
+00:00:53,930 --> 00:00:56,620
 A final and a champion is crowned.
 
-19
-00:01:04,150 --> 00:01:05,780
+17
+00:00:56,850 --> 00:00:58,480
 All of it, hook storage.
 
-20
-00:01:06,490 --> 00:01:09,280
+18
+00:00:59,190 --> 00:01:01,980
 Under the hood, one dynamic fee pool.
 
-21
-00:01:09,790 --> 00:01:15,440
+19
+00:01:02,490 --> 00:01:08,140
 Fans pay lower fees, a quarter percent
 dropping to 0.15 while their team plays.
 
-22
-00:01:16,010 --> 00:01:20,800
+20
+00:01:08,710 --> 00:01:13,500
 A 0.2% skim on fan swaps builds the
 Champions Pot.
 
-23
-00:01:21,290 --> 00:01:24,100
+21
+00:01:13,990 --> 00:01:16,800
 Winning fans claim it pro-rata to their
 volume.
 
-24
-00:01:24,510 --> 00:01:26,860
+22
+00:01:17,210 --> 00:01:19,560
 Leftovers are donated to the LPs.
 
-25
-00:01:27,410 --> 00:01:30,720
+23
+00:01:20,110 --> 00:01:23,420
 No owner, no oracle, no randomness.
 
-26
-00:01:31,030 --> 00:01:33,540
+24
+00:01:23,730 --> 00:01:26,240
 The only inputs are swaps and time.
 
-27
-00:01:34,070 --> 00:01:36,740
-Even wash trading a goal just funds the
-pot.
+25
+00:01:26,410 --> 00:01:28,560
+38 tests, fuzzed.
 
-28
-00:01:37,210 --> 00:01:40,880
-38 tests, fuzzed, verified on chain.
-
-29
-00:01:41,410 --> 00:01:46,320
+26
+00:01:28,910 --> 00:01:33,820
 Mundial, live on X Layer, the pool that
 plays the World Cup.

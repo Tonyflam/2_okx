@@ -24,9 +24,19 @@ Pronunciation: see [VOICE.md](VOICE.md) dictionary. Emphasize: "GOLDEN GOAL", "n
 
 ### ⚠ REQUIRED CUTS in the recorded audio (do these in the editor before export)
 
-1. **Hard-cut** the sentence *"Even wash-trading a goal just funds the pot."* — remove it entirely.
-2. In *"Thirty-eight tests. Fuzzed. Verified on-chain."* — **cut after "Fuzzed."** ("Verified on-chain" is not yet true; source verification is pending, and the real count is 77 tests — the on-screen card shows the correct number).
-3. Trim or cut *"Every World Cup DeFi project so far picks one match, trusts an admin, or rolls the dice."* — unsupported competitor claim; keep only "Mundial runs the entire tournament — with no one in charge."
+Your uploaded narration (`assets/video/narration.mp3`, 106.3 s) was transcribed word-by-word. Make these **three ripple cuts** at these exact timestamps (raw-audio time):
+
+| # | Cut (raw audio) | Removes |
+|---|---|---|
+| 1 | **0:07.90 → 0:15.20** | "Every World Cup DeFi project so far picks one match, trusts an admin, or rolls the dice." (unsupported competitor claim) |
+| 2 | **1:33.60 → 1:37.10** | "Even wash-trading a goal just funds the pot." |
+| 3 | **1:39.30 → 1:41.00** | "…verified on-chain." (not yet true — verification pending; keep "38 tests, fuzzed.") |
+
+Narration after cuts ≈ **93.8 s**. To land in the 105–120 s window: hold the title card ~3 s before the first word and hold the end card ~8 s after the last word (plus a 1–2 s breath after GOLDEN GOAL if you like).
+
+**Captions — two files, pick by workflow:**
+- `assets/video/ready/captions-final.srt` — accurate to the **raw** audio (29 cues, real word timings). Use if you import captions *before* cutting.
+- `assets/video/ready/captions-after-cuts.srt` — pre-shifted for the 3 cuts above (26 cues). Use if you cut the audio first, then import captions at the narration's first word. **Recommended.**
 
 Never show or say "verified" or "liquidity live" anywhere in the video.
 
