@@ -10,10 +10,10 @@
 | One-line description | The Uniswap v4 pool that plays the World Cup: an autonomous 8-team knockout tournament where swaps are shots, volume scores goals, and champion fans claim the pot. | 165 | ✅ |
 | Project description | Use the 100-word pitch from [PITCH.md](PITCH.md). | ~640 | ✅ |
 | Chain | X Layer Mainnet (chainId 196) | — | ✅ |
-| Hook contract address | `<HOOK_ADDRESS>` | — | ⏳ deploy |
-| Token contract address | `<TOKEN_ADDRESS>` | — | ⏳ deploy |
+| Hook contract address | `0x51f3d18a574c1deec5c04d395573cda9248dd0c4` | — | ✅ deployed |
+| Token contract address | `0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f` | — | ✅ deployed |
 | Pool ID | `<POOL_ID>` | — | ⏳ deploy |
-| Explorer link (verified) | `https://www.oklink.com/x-layer/address/<HOOK_ADDRESS>` | — | ⏳ verify |
+| Explorer link (verified) | `https://www.oklink.com/x-layer/address/0x51f3d18a574c1deec5c04d395573cda9248dd0c4` | — | ⏳ verify |
 | GitHub repository | https://github.com/Tonyflam/2_okx | — | ✅ (push pending approval) |
 | Hooklist PR/issue URL | `<HOOKLIST_PR_URL>` | — | ⏳ Phase 5 |
 | Project X account | `<@handle>` | — | ⏳ Phase 6 |

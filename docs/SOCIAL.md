@@ -9,7 +9,7 @@
 - Bio (≤160): `⚽ The Uniswap v4 pool that plays the World Cup — live on @XLayerOfficial. Swaps are shots. Goals win matches. No admin, no oracle. Not affiliated with FIFA.`
 - Website: `https://github.com/Tonyflam/2_okx`
 - Location: `X Layer · chain 196`
-- Profile image: `assets/brand/x-avatar.png` · Banner: `assets/brand/x-banner.png` (crop 1500×500)
+- Profile image: `assets/brand/x-avatar.jpg` (center-crop to square) · Banner: `assets/brand/x-banner.jpg` (crop 1500×500)
 
 ## Post 1 — REQUIRED launch post (pin it; tags @XLayerOfficial; publish only after deploy)
 

@@ -1,6 +1,10 @@
 # ⚽ MUNDIAL — the pool that plays the World Cup
 
+![Mundial](assets/brand/hero-repo.jpg)
+
 **A Uniswap v4 Hook on X Layer that turns one liquidity pool into a fully on-chain 8-team knockout tournament.** Trading *is* the game: every swap by a pledged fan is a shot on goal, volume scores goals, the bracket resolves itself, and champion fans claim a pot skimmed from their own trades.
+
+**🔴 LIVE on X Layer mainnet (chain 196)** — Hook [`0x51f3d18a574c1deec5c04d395573cda9248dd0c4`](https://www.oklink.com/x-layer/address/0x51f3d18a574c1deec5c04d395573cda9248dd0c4) · Token [`0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f`](https://www.oklink.com/x-layer/address/0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f) · Kickoff **2026-07-12 12:45 UTC** · Full record: [deployments/xlayer.json](deployments/xlayer.json)
 
 Built for the **Hook × World Cup** campaign (OKX × X Layer × Uniswap v4, Jun 11 – Jul 12 2026).
 

@@ -1,39 +1,39 @@
 {
   "network": "X Layer Mainnet",
   "chainId": 196,
-  "status": "NOT_DEPLOYED — placeholders only; filled after human-approved broadcast",
-  "deployer": "<DEPLOYER_ADDRESS>",
+  "status": "DEPLOYED 2026-07-12 ~11:45 UTC — verified on-chain (code present, pool initialized, kickoff set)",
+  "deployer": "0x80bc3f17da930c473205eec282850fb8c46436b0",
   "contracts": {
     "MundialHook": {
-      "address": "<PENDING>",
-      "deployTx": "<PENDING>",
-      "explorer": "https://www.oklink.com/x-layer/address/<PENDING>",
+      "address": "0x51f3d18a574c1deec5c04d395573cda9248dd0c4",
+      "deployTx": "0x97ea47ce56c0af48058049b62787f05244086736588496d903fb0ceb17a25dd0",
+      "explorer": "https://www.oklink.com/x-layer/address/0x51f3d18a574c1deec5c04d395573cda9248dd0c4",
       "verified": false,
       "hookFlagBits": "0x10C4 (afterInitialize | beforeSwap | afterSwap | afterSwapReturnDelta)"
     },
     "MundialToken": {
-      "address": "<PENDING>",
-      "deployTx": "<PENDING>",
-      "explorer": "https://www.oklink.com/x-layer/address/<PENDING>",
+      "address": "0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f",
+      "deployTx": "0x60920d23354211443a444286440593fd84ffd6c0b56629606034cac1345d1131",
+      "explorer": "https://www.oklink.com/x-layer/address/0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f",
       "verified": false,
       "supply": "100000000000000000000000000"
     }
   },
   "pool": {
-    "poolId": "<PENDING>",
+    "poolId": "0x0cc28818a207ae3c182a88dbe9677203859f916116711a19c9b010bf390bbeda",
     "poolKey": {
       "currency0": "0x0000000000000000000000000000000000000000 (native OKB)",
-      "currency1": "<MUNDIAL_TOKEN_ADDRESS>",
+      "currency1": "0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f",
       "fee": "0x800000 (DYNAMIC_FEE_FLAG)",
       "tickSpacing": 60,
-      "hooks": "<HOOK_ADDRESS>"
+      "hooks": "0x51f3d18a574c1deec5c04d395573cda9248dd0c4"
     },
-    "initializeTx": "<PENDING>",
+    "initializeTx": "0x8237004d7883cf1454da796074b16c831076a07b6354c685f5296942ef9d3992",
     "initialSqrtPriceX96": "79228162514264337593543950336 (1:1)",
-    "liquidityTx": "<PENDING>"
+    "liquidityTx": "<PENDING — SeedLiquidity.s.sol>"
   },
   "gameParameters": {
-    "kickoff": "<PENDING unix ts>",
+    "kickoff": "1783860336 (2026-07-12 12:45:36 UTC)",
     "regulation": 28800,
     "extraTime": 3600,
     "breakTime": 10800,
@@ -51,7 +51,7 @@
     "evmVersion": "cancun",
     "optimizer": true,
     "optimizerRuns": 800,
-    "gitCommit": "<PENDING — commit hash at deploy time>"
+    "gitCommit": "3d26b11db42b72db6fa55c70eee09bf3f530bf63"
   },
   "simulation": {
     "date": "2026-07-12T05:45:00Z",

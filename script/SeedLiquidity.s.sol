@@ -15,28 +15,26 @@ interface IAllowanceTransfer {
 }
 
 /// @notice Seeds initial full-range liquidity in the Mundial pool through the
-/// official v4 PositionManager (Permit2 flow).
+/// official v4 PositionManager. currency0 is native OKB (sent as msg.value,
+/// leftover swept back); currency1 is MUNDIAL (Permit2 flow).
 ///
 /// Environment:
-///   PRIVATE_KEY, POSITION_MANAGER, PERMIT2 (0x000000000022D473030F116dDEE9F6B43aC78BA3),
-///   TOKEN (MUNDIAL), QUOTE_TOKEN, HOOK, TICK_SPACING (60),
-///   LIQUIDITY (raw L, default 1e21), AMOUNT_MAX (per-token cap, default 5e22)
+///   POSITION_MANAGER, PERMIT2 (0x000000000022D473030F116dDEE9F6B43aC78BA3),
+///   TOKEN (MUNDIAL = currency1), HOOK, TICK_SPACING (60),
+///   LIQUIDITY (raw L, default 5e16), AMOUNT_MAX (per-currency cap, default 6e16)
 contract SeedLiquidity is Script {
     function run() external {
         IPositionManager posm = IPositionManager(vm.envAddress("POSITION_MANAGER"));
         IAllowanceTransfer permit2 = IAllowanceTransfer(vm.envAddress("PERMIT2"));
         address token = vm.envAddress("TOKEN");
-        address quote = vm.envAddress("QUOTE_TOKEN");
         address hook = vm.envAddress("HOOK");
         int24 tickSpacing = int24(int256(vm.envOr("TICK_SPACING", uint256(60))));
-        uint256 liquidity = vm.envOr("LIQUIDITY", uint256(1e21));
-        uint256 amountMax = vm.envOr("AMOUNT_MAX", uint256(5e22));
+        uint256 liquidity = vm.envOr("LIQUIDITY", uint256(5e16));
+        uint256 amountMax = vm.envOr("AMOUNT_MAX", uint256(6e16));
 
-        (Currency c0, Currency c1) =
-            token < quote ? (Currency.wrap(token), Currency.wrap(quote)) : (Currency.wrap(quote), Currency.wrap(token));
         PoolKey memory key = PoolKey({
-            currency0: c0,
-            currency1: c1,
+            currency0: Currency.wrap(address(0)), // native OKB
+            currency1: Currency.wrap(token),
             fee: LPFeeLibrary.DYNAMIC_FEE_FLAG,
             tickSpacing: tickSpacing,
             hooks: IHooks(hook)
@@ -51,15 +49,16 @@ contract SeedLiquidity is Script {
         vm.startBroadcast();
 
         IERC20(token).approve(address(permit2), type(uint256).max);
-        IERC20(quote).approve(address(permit2), type(uint256).max);
         permit2.approve(token, address(posm), type(uint160).max, type(uint48).max);
-        permit2.approve(quote, address(posm), type(uint160).max, type(uint48).max);
 
-        bytes memory actions = abi.encodePacked(uint8(Actions.MINT_POSITION), uint8(Actions.SETTLE_PAIR));
-        bytes[] memory params = new bytes[](2);
+        bytes memory actions = abi.encodePacked(
+            uint8(Actions.MINT_POSITION), uint8(Actions.SETTLE_PAIR), uint8(Actions.SWEEP)
+        );
+        bytes[] memory params = new bytes[](3);
         params[0] = abi.encode(key, tickLower, tickUpper, liquidity, amountMax, amountMax, msg.sender, bytes(""));
         params[1] = abi.encode(key.currency0, key.currency1);
-        posm.modifyLiquidities(abi.encode(actions, params), block.timestamp + 300);
+        params[2] = abi.encode(key.currency0, msg.sender); // refund unused native OKB
+        posm.modifyLiquidities{value: amountMax}(abi.encode(actions, params), block.timestamp + 300);
 
         vm.stopBroadcast();
 
