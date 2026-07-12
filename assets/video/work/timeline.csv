@@ -1,0 +1,15 @@
+idx|kind|source|fallback|overlays|dur|zoom|caption
+1|still|00-title-card.png|||5.0|in|What if a liquidity pool could play the World Cup?
+2|still|01-tournament-card.png|||12.5|out|This is Mundial — a Uniswap v4 hook on X Layer. It doesn't pick one match or trust an admin. It runs the entire tournament — with no one in charge.
+3|still|02-mechanic-card.png|||14.0|in|Fans pledge one of eight teams — once, irreversibly. When their team's match is live, every swap becomes a shot on goal. Volume scores goals. The market plays the football.
+4|clip|01-foundry-demo.mp4|terminal-wide.png|recording-label-foundry.png|11.5|in|Watch it run. Argentina versus France — fans trade, goals go up.
+5|still|terminal-goals.png||03-score-overlay.png;recording-label-foundry.png|4.5|none|Five to three — Argentina advance.
+6|still|terminal-golden.png||recording-label-foundry.png|9.0|in|Brazil against England is scoreless into extra time. One Brazilian fan swaps… GOLDEN GOAL.
+7|still|04-golden-goal-card.png|||4.0|none|The match settles inside the very swap that scored it.
+8|still|terminal-champion.png||05-champion-overlay.png;recording-label-foundry.png|8.0|none|Semifinals, penalties decided by shot counts, a final — and a champion is crowned. All of it, hook storage.
+9|still|06-fees-card.png|||12.0|out|One dynamic-fee pool. Fans pay lower fees — a quarter percent, dropping to point-one-five while their team plays.
+10|still|07-pot-card.png|||8.0|in|A zero-point-two percent skim builds the Champions Pot. Winning fans claim it pro-rata; leftovers go to the LPs.
+11|still|08-trust-card.png|||11.0|none|No owner. No oracle. No randomness. The only inputs are swaps and time. Seventy-seven tests. Fuzzed.
+12|clip|02-xlayer-explorer.mp4|09-live-proof-card.png|?recording-label-mainnet.png|8.0|in|Deployed on X Layer. Code public on GitHub.
+13|still|10-end-card.png|||6.0|none|Mundial. Live on X Layer. The pool that plays the World Cup.
+14|still|10-end-card.png|||4.0|none|

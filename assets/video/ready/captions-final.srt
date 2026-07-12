@@ -1,0 +1,98 @@
+1
+00:00:00,000 --> 00:00:04,950
+What if a liquidity pool could play the
+World Cup?
+
+2
+00:00:05,000 --> 00:00:11,971
+This is Mundial — a Uniswap v4 hook on X
+Layer. It doesn't pick one match or trust
+
+3
+00:00:12,021 --> 00:00:17,450
+an admin. It runs the entire tournament —
+with no one in charge.
+
+4
+00:00:17,500 --> 00:00:23,956
+Fans pledge one of eight teams — once,
+irreversibly. When their team's match is
+
+5
+00:00:24,006 --> 00:00:30,709
+live, every swap becomes a shot on goal.
+Volume scores goals. The market plays the
+
+6
+00:00:30,759 --> 00:00:31,450
+football.
+
+7
+00:00:31,500 --> 00:00:42,950
+Watch it run. Argentina versus France —
+fans trade, goals go up.
+
+8
+00:00:43,000 --> 00:00:47,450
+Five to three — Argentina advance.
+
+9
+00:00:47,500 --> 00:00:55,237
+Brazil against England is scoreless into
+extra time. One Brazilian fan swaps…
+
+10
+00:00:55,287 --> 00:00:56,450
+GOLDEN GOAL.
+
+11
+00:00:56,500 --> 00:01:00,450
+The match settles inside the very swap
+that scored it.
+
+12
+00:01:00,500 --> 00:01:05,959
+Semifinals, penalties decided by shot
+counts, a final — and a champion is
+
+13
+00:01:06,009 --> 00:01:08,450
+crowned. All of it, hook storage.
+
+14
+00:01:08,500 --> 00:01:16,379
+One dynamic-fee pool. Fans pay lower fees
+— a quarter percent, dropping to
+
+15
+00:01:16,429 --> 00:01:20,450
+point-one-five while their team plays.
+
+16
+00:01:20,500 --> 00:01:26,000
+A zero-point-two percent skim builds the
+Champions Pot. Winning fans claim it
+
+17
+00:01:26,050 --> 00:01:28,450
+pro-rata; leftovers go to the LPs.
+
+18
+00:01:28,500 --> 00:01:36,339
+No owner. No oracle. No randomness. The
+only inputs are swaps and time.
+
+19
+00:01:36,389 --> 00:01:39,450
+Seventy-seven tests. Fuzzed.
+
+20
+00:01:39,500 --> 00:01:47,450
+Deployed on X Layer. Code public on
+GitHub.
+
+21
+00:01:47,500 --> 00:01:53,450
+Mundial. Live on X Layer. The pool that
+plays the World Cup.
+

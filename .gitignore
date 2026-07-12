@@ -3,3 +3,9 @@ out/
 broadcast/
 .env
 docs/NEXT_AGENT_PROMPT.md
+# video render intermediates & binaries (rebuild: ./script/build_demo_video.sh)
+assets/video/work/segments/
+assets/video/work/joined.mp4
+assets/video/review/
+assets/video/final/
+assets/video/raw/
