@@ -42,8 +42,10 @@ contract SeedLiquidity is Script {
             hooks: IHooks(hook)
         });
 
-        // Widest tick range aligned to spacing.
+        // Widest tick range aligned to spacing (divide-then-multiply is intentional flooring).
+        // forge-lint: disable-next-line(divide-before-multiply)
         int24 tickLower = (int24(-887272) / tickSpacing) * tickSpacing;
+        // forge-lint: disable-next-line(divide-before-multiply)
         int24 tickUpper = (int24(887272) / tickSpacing) * tickSpacing;
 
         vm.startBroadcast();

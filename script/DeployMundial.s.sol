@@ -46,6 +46,8 @@ contract DeployMundial is Script {
     }
 
     function _teams() internal pure returns (bytes32[8] memory teams) {
+        // Short ASCII literals always fit in bytes32; casts are safe.
+        // forge-lint: disable-start(unsafe-typecast)
         teams = [
             bytes32("Argentina"),
             bytes32("France"),
@@ -56,6 +58,7 @@ contract DeployMundial is Script {
             bytes32("Portugal"),
             bytes32("Netherlands")
         ];
+        // forge-lint: disable-end(unsafe-typecast)
     }
 
     function _config() internal view returns (Config memory cfg) {
