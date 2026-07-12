@@ -15,10 +15,10 @@
 | Pool ID | `0x0cc28818a207ae3c182a88dbe9677203859f916116711a19c9b010bf390bbeda` | — | ✅ initialized |
 | Explorer link | `https://www.oklink.com/x-layer/address/0x51f3d18a574c1DeEC5c04d395573cda9248Dd0C4` (deployed; source verification pending) | — | ✅ opens |
 | GitHub repository | https://github.com/Tonyflam/2_okx | — | ✅ public |
-| Hooklist PR/issue URL | `<HOOKLIST_PR_URL>` | — | ⏳ Phase 5 |
+| Hooklist PR/issue URL | https://github.com/Uniswap/hooklist/pull/1062 | — | ✅ filed |
 | Project X account | `<@handle>` | — | ⏳ Phase 6 |
 | Launch post URL (tags @XLayerOfficial) | `<POST_URL>` | — | ⏳ Phase 6 |
-| Demo video URL | `<VIDEO_URL>` (YouTube unlisted; test in private window) | — | ⏳ Phase 7 |
+| Demo video URL | https://youtu.be/Jk3e9K3U0bg (YouTube unlisted; test in private window) | — | ✅ uploaded |
 | Team / contact | your name + email/TG (your choice — not stored in repo) | — | ⏳ human |
 | Wallet for prizes | your address (NOT the throwaway deployer unless you intend it) | — | ⏳ human |
 | How it uses Uniswap v4 | beforeSwap dynamic-fee overrides per game state; afterSwap + afterSwapReturnDelta pot skim and shot recording; afterInitialize single-pool binding; donate() LP fallback via unlock callback; CREATE2-mined permission address. | 240 | ✅ |
