@@ -1,6 +1,6 @@
 # Mundial — Judge Guide
 
-The fastest honest path to evaluating this project. Everything below is verifiable from public sources; status labels are current as of 2026-07-12 23:00 UTC.
+The fastest honest path to evaluating this project. Everything below is verifiable from public sources; status labels are current as of 2026-07-17.
 
 ## 30-second read
 
