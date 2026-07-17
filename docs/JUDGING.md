@@ -55,7 +55,7 @@ forge test --match-contract MundialDemo -vv
 | Item | Status |
 |---|---|
 | Hook + token deployed, pool initialized (mainnet) | ✅ VERIFIED (bytecode + txs in [deployments/xlayer.json](../deployments/xlayer.json)) |
-| Source verification | ✅ VERIFIED — exact match on [Sourcify](https://repo.sourcify.dev/196/0x51f3d18a574c1DeEC5c04d395573cda9248Dd0C4) (hook + [token](https://repo.sourcify.dev/196/0xFB8FB4cF5f92256c52a638F46f8eCC2525303d6f), chain 196) |
+| Source verification | ✅ VERIFIED — published on OKLink ([hook](https://www.oklink.com/x-layer/evm/address/0x51f3d18a574c1deec5c04d395573cda9248dd0c4/contract) + [token](https://www.oklink.com/x-layer/evm/address/0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f/contract)) and exact match on [Sourcify](https://repo.sourcify.dev/196/0x51f3d18a574c1DeEC5c04d395573cda9248Dd0C4), chain 196 |
 | Pool liquidity | ⏳ PENDING (pool initialized at 1:1, no position minted yet) |
 | OKX Wallet routing | ⏳ UNCONFIRMED (depends on liquidity + discovery) |
 | Hooklist | ✅ MERGED into [Uniswap/hooklist](https://github.com/Uniswap/hooklist/blob/main/hooks/xlayer/0x51f3d18a574c1deec5c04d395573cda9248dd0c4.json) (2026-07-16, `verifiedSource: true`) |

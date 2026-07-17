@@ -14,7 +14,8 @@
     "repository": "https://github.com/Tonyflam/2_okx",
     "demoVideo": "https://youtu.be/Jk3e9K3U0bg",
     "hooklistEntry": "https://github.com/Uniswap/hooklist/blob/main/hooks/xlayer/0x51f3d18a574c1deec5c04d395573cda9248dd0c4.json",
-    "hooklistPR": "https://github.com/Uniswap/hooklist/pull/1062",
+    "hooklistPR": "https://github.com/Uniswap/hooklist/pull/1103",
+    "originalHooklistPR": "https://github.com/Uniswap/hooklist/pull/1062",
     "explorerHook": "https://www.oklink.com/x-layer/address/0x51f3d18a574c1deec5c04d395573cda9248dd0c4",
     "judgeGuide": "docs/JUDGING.md"
   },
