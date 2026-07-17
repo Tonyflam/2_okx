@@ -10,7 +10,7 @@ Mundial makes one Uniswap v4 pool play a complete eight-team knockout World Cup 
 - **Token**: [`0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f`](https://www.oklink.com/x-layer/address/0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f)
 - **Pool ID**: `0x0cc28818a207ae3c182a88dbe9677203859f916116711a19c9b010bf390bbeda`
 - **Demo video**: https://youtu.be/Jk3e9K3U0bg
-- **Hooklist PR**: https://github.com/Uniswap/hooklist/pull/1062
+- **Hooklist**: [listed in Uniswap/hooklist](https://github.com/Uniswap/hooklist/blob/main/hooks/xlayer/0x51f3d18a574c1deec5c04d395573cda9248dd0c4.json) (merged 2026-07-16 via [#1103](https://github.com/Uniswap/hooklist/pull/1103); submitted as [#1062](https://github.com/Uniswap/hooklist/pull/1062))
 
 ## Evidence by judging dimension
 
@@ -58,7 +58,7 @@ forge test --match-contract MundialDemo -vv
 | Source verification | ✅ VERIFIED — exact match on [Sourcify](https://repo.sourcify.dev/196/0x51f3d18a574c1DeEC5c04d395573cda9248Dd0C4) (hook + [token](https://repo.sourcify.dev/196/0xFB8FB4cF5f92256c52a638F46f8eCC2525303d6f), chain 196) |
 | Pool liquidity | ⏳ PENDING (pool initialized at 1:1, no position minted yet) |
 | OKX Wallet routing | ⏳ UNCONFIRMED (depends on liquidity + discovery) |
-| Hooklist PR | 🟢 OPEN, checks passing ([#1062](https://github.com/Uniswap/hooklist/pull/1062)) |
+| Hooklist | ✅ MERGED into [Uniswap/hooklist](https://github.com/Uniswap/hooklist/blob/main/hooks/xlayer/0x51f3d18a574c1deec5c04d395573cda9248dd0c4.json) (2026-07-16, `verifiedSource: true`) |
 
 ## Trust assumptions & known limitations
 

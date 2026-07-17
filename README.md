@@ -6,7 +6,7 @@
 
 **🔴 LIVE on X Layer mainnet (chain 196)** — Hook [`0x51f3d18a574c1deec5c04d395573cda9248dd0c4`](https://www.oklink.com/x-layer/address/0x51f3d18a574c1deec5c04d395573cda9248dd0c4) · Token [`0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f`](https://www.oklink.com/x-layer/address/0xfb8fb4cf5f92256c52a638f46f8ecc2525303d6f) · Pool `0x0cc28818a207ae3c182a88dbe9677203859f916116711a19c9b010bf390bbeda` · Kickoff **2026-07-12 12:45 UTC** · Full record: [deployments/xlayer.json](deployments/xlayer.json)
 
-🎥 **[2-minute demo video](https://youtu.be/Jk3e9K3U0bg)** · 📋 **[Judge guide](docs/JUDGING.md)** · 🪝 **[Uniswap hooklist PR #1062](https://github.com/Uniswap/hooklist/pull/1062)**
+🎥 **[2-minute demo video](https://youtu.be/Jk3e9K3U0bg)** · 📋 **[Judge guide](docs/JUDGING.md)** · 🪝 **[Listed on the Uniswap hooklist](https://github.com/Uniswap/hooklist/blob/main/hooks/xlayer/0x51f3d18a574c1deec5c04d395573cda9248dd0c4.json)** (merged via [#1103](https://github.com/Uniswap/hooklist/pull/1103))
 
 **Current status (honest):** contracts deployed & pool initialized ✅ · source verified on Sourcify (exact match) ✅ · pool liquidity pending ⏳ · OKX Wallet routing unconfirmed ⏳
 
